@@ -11,6 +11,7 @@ class PigLatinizer
   def consonant?(char)
     !char.match(/[aAeEiIoOuU]/)
   end
+  
 
   def piglatinize_word(word)
   
@@ -20,7 +21,7 @@ class PigLatinizer
     elsif  constant?(word[0])
       word = word.slice(1..-1) + word.slice(0)
     
-    elsif consonant?(word[0]) && consonant?(word[1]) #starts with 2 consonants
+    elsif consonant?(word[0]) && consonant?(word[1])
       word = word.slice(2..-1) + word.slice(0,2)
       
     else 
@@ -30,10 +31,6 @@ class PigLatinizer
     end
 
   def piglatinize_sentence(sentence)
-    sentence.split.map { |word| piglatinize_word(word) }.join(" ")
+    sentence.split.map { |word| piglatinize_word(word) }.join
   end
-
-
-
-
 end
