@@ -18,7 +18,7 @@ end
     if !consonant?(word[0]) 
       word += "w"
     
-    elsif  constant?(word[0])
+    elsif  consonant?(word[0])
       word = word.slice(1..-1) + word.slice(0)
     
     elsif consonant?(word[0]) && consonant?(word[1])
