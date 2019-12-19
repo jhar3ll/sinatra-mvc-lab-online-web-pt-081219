@@ -1,6 +1,6 @@
 require_relative 'config/environment'
 
-lass App < Sinatra::Base
+class App < Sinatra::Base
 
   get '/' do
     erb :user_input
