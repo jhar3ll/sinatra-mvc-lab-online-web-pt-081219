@@ -12,11 +12,12 @@ end
   def consonant?(char)
     !char.match(/[aAeEiIoOuU]/)
   end
+  
 
   def piglatinize_word(word)
-    # word starts with vowel
+    
     if !consonant?(word[0])
-      word = word + "w"
+      word += "w"
     # word starts with 3 consonants
     elsif consonant?(word[0]) && consonant?(word[1]) && consonant?(word[2])
       word = word.slice(3..-1) + word.slice(0,3)
