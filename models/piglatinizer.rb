@@ -6,7 +6,7 @@ class PigLatinizer
     else 
       piglatinize_sentence(input_str)
   end
-  
+end 
 
   def consonant?(char)
     !char.match(/[aAeEiIoOuU]/)
