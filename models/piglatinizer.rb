@@ -22,12 +22,14 @@ end
     elsif
       word = word.slice(1..-1) + word.slice(0)
     
+    elsif consonant?(word[0]) && consonant?(word[1]) && consonant?(word[2])
+      word = word.slice(3..-1) + word.slice(0,3)
+      
     elsif consonant?(word[0]) && consonant?(word[1])
       word = word.slice(2..-1) + word.slice(0,2)  
       
-    elsif consonant?(word[0]) && consonant?(word[1]) && consonant?(word[2])
-      word = word.slice(3..-1) + word.slice(0,3)
-    # word starts with 2 consonants
+ 
+   
    
    
     end
